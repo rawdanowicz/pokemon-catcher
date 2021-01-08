@@ -1,5 +1,21 @@
-<form class="player-form">
+<form class="player-form" [formGroup]="playerForm" (ngSubmit)="createPlayer()">
   <label class="player-form__label" for="nickname">Nickname</label>
-  <input class="player-form__input" id="nickname" type="text" />
-  <button class="player-form__btn" type="submit">Continue</button>
+  <input
+    class="player-form__input"
+    id="nickname"
+    type="text"
+    formControlName="nickname"
+  />
+  <button class="player-form__btn" type="submit" [disabled]="!playerForm.valid">
+    Continue
+  </button>
 </form>
+
+<div class="errors">
+  <p
+    class="errors__nickname"
+    *ngIf="nickname.invalid && (nickname.dirty || nickname.touched)"
+  >
+    Enter your nickname
+  </p>
+</div>
