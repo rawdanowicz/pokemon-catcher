@@ -32,7 +32,7 @@ export class StartScreenComponent implements OnInit {
   // passes data entered by user and keeps them in PlayerService
   createPlayer(): void {
     if (this.playerForm.valid) {
-      this.playerService.playerNickname = this.nickname.value;
+      this.playerService.player = this.playerForm.value;
       this.playerForm.reset();
       this.router.navigate(['pokemons']);
     }

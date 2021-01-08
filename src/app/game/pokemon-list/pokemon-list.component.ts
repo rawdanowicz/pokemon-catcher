@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
+import { Player } from 'src/app/shared/player';
 import { PlayerService } from 'src/app/shared/player.service';
 
 @Component({
@@ -8,17 +10,15 @@ import { PlayerService } from 'src/app/shared/player.service';
   styleUrls: ['./pokemon-list.component.scss'],
 })
 export class PokemonListComponent implements OnInit {
-  nickname!: string;
+  player!: Player;
 
   constructor(private router: Router, private playerService: PlayerService) {}
 
   ngOnInit(): void {
-    this.nickname = this.playerService.playerNickname;
+    this.player = this.playerService.player;
 
-    // makes sure that player has entered required data, otherwise navigates to start screen
-    if (this.nickname) {
-      this.nickname = this.playerService.playerNickname;
-    } else {
+    // makes sure that player didn't get there by changing URL without entering required data
+    if (!this.player.nickname) {
       this.router.navigate(['']);
     }
   }
