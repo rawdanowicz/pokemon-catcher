@@ -1,9 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { StartScreenComponent } from './game/start-screen/start-screen.component';
-
-const routes: Routes = [{ path: 'start', component: StartScreenComponent }];
+const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'start',
+    pathMatch: 'full',
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { PlayerService } from 'src/app/shared/player.service';
 
@@ -13,6 +14,7 @@ export class StartScreenComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
+    private router: Router,
     private playerService: PlayerService
   ) {}
 
@@ -31,6 +33,8 @@ export class StartScreenComponent implements OnInit {
   createPlayer(): void {
     if (this.playerForm.valid) {
       this.playerService.playerNickname = this.nickname.value;
+      this.playerForm.reset();
+      this.router.navigate(['pokemons']);
     }
   }
 }
