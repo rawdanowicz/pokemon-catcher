@@ -3,8 +3,9 @@
   <img class="pokemon__artwork" [src]="pokemon.artwork" [alt]="pokemon.name" />
   <ul class="pokemon__stats">
     <li class="pokemon__stat" *ngFor="let stat of pokemon.stats">
-      {{ stat.name }}: {{ stat.value }}
+      {{ stat.name }}:
+      <span class="pokemon__stat--value">{{ stat.value }}</span>
     </li>
   </ul>
-  <p class="pokemon__caught" *ngIf="pokemon.caught === true">Caught!</p>
+  <p class="pokemon__catch" *ngIf="pokemon.caught === true">Caught!</p>
 </div>

@@ -26,7 +26,7 @@ export class PokemonService {
         data.forEach((pokemon: { name: string; url: string }) => {
           // initial Pokemon object that will be filled with API's data
           const fetchedPokemon: Pokemon = {
-            name: pokemon.name,
+            name: pokemon.name.replace(/-/g, ' '),
             artwork: '',
             stats: [
               {
@@ -40,7 +40,10 @@ export class PokemonService {
             fetchedPokemon.artwork =
               data.sprites.other['official-artwork'].front_default;
             fetchedPokemon.stats = data.stats.map((data: any) => {
-              return { name: data.stat.name, value: data.base_stat };
+              return {
+                name: data.stat.name.replace(/-/g, ' '),
+                value: data.base_stat,
+              };
             });
           });
           // after getting all needed data each Pokemon gets pushed into the array
