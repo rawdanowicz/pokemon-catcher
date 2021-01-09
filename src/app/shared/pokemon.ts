@@ -7,4 +7,5 @@ export interface Pokemon {
       value: Number;
     }
   ];
+  caught?: boolean;
 }

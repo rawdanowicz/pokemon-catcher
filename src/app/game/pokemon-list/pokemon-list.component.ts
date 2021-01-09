@@ -32,11 +32,21 @@ export class PokemonListComponent implements OnInit, OnDestroy {
       this.router.navigate(['']);
     } else {
       // gets data from PokemonService
-      this.getPokemons = this.pokemonService.getPokemons().subscribe((data) => {
-        console.log(data);
-        this.pokemons = data;
-      });
+      this.getPokemons = this.pokemonService
+        .getPokemons()
+        .subscribe((data: Pokemon[]) => {
+          this.pokemons = data;
+        });
     }
+  }
+
+  catchEm(): void {
+    this.pokemons.forEach((pokemon: Pokemon) => {
+      // each Pokemon gets 50% of getting caught
+      pokemon.caught = Math.random() < 0.5;
+    });
+
+    console.log({ nickname: this.player.nickname, pokemons: this.pokemons });
   }
 
   ngOnDestroy(): void {
