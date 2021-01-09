@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { PlayerService } from 'src/app/shared/player.service';
+import { PlayerService } from 'src/app/shared/player/player.service';
 
 @Component({
   selector: 'app-start-screen',

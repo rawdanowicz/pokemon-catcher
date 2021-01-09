@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { Pokemon } from 'src/app/shared/pokemon';
+import { Pokemon } from 'src/app/shared/pokemon/pokemon';
 
 @Component({
   selector: 'app-pokemon',

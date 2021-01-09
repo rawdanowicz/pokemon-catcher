@@ -5,7 +5,7 @@ import { map, switchMap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 
 import { Pokemon } from './pokemon';
-import { PlayerService } from './player.service';
+import { PlayerService } from '../player/player.service';
 
 @Injectable({ providedIn: 'root' })
 export class PokemonService {

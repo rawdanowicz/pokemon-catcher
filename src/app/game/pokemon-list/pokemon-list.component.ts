@@ -1,10 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Player } from 'src/app/shared/player';
-import { Pokemon } from 'src/app/shared/pokemon';
-import { PlayerService } from 'src/app/shared/player.service';
-import { PokemonService } from 'src/app/shared/pokemon.service';
+import { Player } from 'src/app/shared/player/player';
+import { Pokemon } from 'src/app/shared/pokemon/pokemon';
+import { PlayerService } from 'src/app/shared/player/player.service';
+import { PokemonService } from 'src/app/shared/pokemon/pokemon.service';
 import { Subscription } from 'rxjs';
 
 @Component({
