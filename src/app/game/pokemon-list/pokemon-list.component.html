@@ -4,7 +4,9 @@
   </header>
 
   <ul class="pokemon-list__list">
-    <li class="pokemon-list__pokemon" *ngFor="let pokemon of pokemons"></li>
+    <li class="pokemon-list__pokemon" *ngFor="let pokemon of pokemons">
+      <app-pokemon [pokemon]="pokemon"></app-pokemon>
+    </li>
   </ul>
 
   <button class="pokemon-list__btn" type="button">Catch'em!</button>
