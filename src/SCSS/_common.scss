@@ -1,1 +1,82 @@
-// all reusable elements used across the app
+// all reusable elements and global styles
+* {
+  letter-spacing: 2px;
+}
+
+body {
+  background-color: rgba($light, 0.5);
+}
+
+button,
+input,
+a {
+  outline-offset: 1px;
+  outline-color: $dark;
+}
+
+// general purpose button
+.btn-primary {
+  width: 150px;
+  padding: 10px 15px;
+  border: 0;
+  border-radius: 4px;
+  font-size: 20px;
+  background-color: darken($blue, 5%);
+  color: #fff;
+  transition: transform 0.2s, background-color 0.2s;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: darken($blue, 20%);
+    transform: scale(1.05);
+  }
+}
+
+// input-box is a whole ready tu use input element with it's label
+// to create new input inside of a form just follow
+// <div class="input-box">
+//  <label class="input-box__label">
+//  <input class="input-box__input">
+// </div>
+.input-box {
+  position: relative;
+  background-color: #fff;
+  z-index: 1;
+
+  &__label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translate(0, -50%) scale(1);
+    transition: transform 0.2s;
+    font-size: 20px;
+    color: $dark;
+    z-index: -1;
+
+    // .input-box__label--active class needs to be added if input's value is not empty
+    &--active {
+      transform: translate(-15%, calc(-150% - 5px)) scale(0.7);
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 5px 2px;
+    font-size: 20px;
+    background-color: transparent;
+    border: 2px solid $dark;
+    border-radius: 4px;
+    color: $dark;
+  }
+}
+
+// error message used in forms
+.error-message {
+  padding: 10px 20px;
+  border: 1px solid $red;
+  background-color: rgba($red, 0.05);
+  border-radius: 4px;
+  font-size: 15px;
+  color: $red;
+}

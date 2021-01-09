@@ -1,21 +1,43 @@
-<form class="player-form" [formGroup]="playerForm" (ngSubmit)="createPlayer()">
-  <label class="player-form__label" for="nickname">Nickname</label>
-  <input
-    class="player-form__input"
-    id="nickname"
-    type="text"
-    formControlName="nickname"
+<div class="start-screen">
+  <img
+    class="logo"
+    src="../../../assets/pokemon-catcher.png"
+    alt="Pokemon Catcher"
   />
-  <button class="player-form__btn" type="submit" [disabled]="!playerForm.valid">
-    Continue
-  </button>
-</form>
+  <div class="player-window">
+    <div class="player-window__errors">
+      <p
+        class="error-message"
+        *ngIf="
+          (nickname.invalid && (nickname.dirty || nickname.touched)) ||
+          invalidSubmit
+        "
+      >
+        Enter your nickname
+      </p>
+    </div>
 
-<div class="errors">
-  <p
-    class="errors__nickname"
-    *ngIf="nickname.invalid && (nickname.dirty || nickname.touched)"
-  >
-    Enter your nickname
-  </p>
+    <form
+      class="player-window__form"
+      [formGroup]="playerForm"
+      (ngSubmit)="createPlayer()"
+    >
+      <div class="input-box">
+        <label
+          class="input-box__label"
+          for="nickname"
+          [ngClass]="nickname.value === '' ? '' : 'input-box__label--active'"
+          >Nickname</label
+        >
+        <input
+          class="input-box__input"
+          id="nickname"
+          type="text"
+          autocomplete="off"
+          formControlName="nickname"
+        />
+      </div>
+      <button class="btn-primary" type="submit">Continue</button>
+    </form>
+  </div>
 </div>

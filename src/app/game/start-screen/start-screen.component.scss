@@ -1,0 +1,49 @@
+.start-screen {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  width: 80vw;
+}
+
+.player-window {
+  position: relative;
+  height: 50vh;
+  width: 50vh;
+  max-height: 520px;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__form {
+    height: 40%;
+    width: 80%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__errors {
+    position: absolute;
+    top: 10%;
+  }
+}
+
+@media (orientation: landscape) {
+  .logo {
+    width: 70vh;
+  }
+
+  .player-window {
+    height: 50vw;
+    width: 50vw;
+  }
+}
