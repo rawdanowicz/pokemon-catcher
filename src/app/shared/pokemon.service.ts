@@ -9,7 +9,7 @@ import { PlayerService } from './player.service';
 
 @Injectable({ providedIn: 'root' })
 export class PokemonService {
-  pokemons: Pokemon[] = [];
+  pokemons!: Pokemon[];
 
   constructor(private playerService: PlayerService, private http: HttpClient) {}
 
@@ -21,6 +21,8 @@ export class PokemonService {
     return this.http.get(`${environment.pokeAPI}${queryOffset}`).pipe(
       map((data: any) => data.results),
       switchMap((data: [{ name: string; url: string }]) => {
+        // makes the Pokemon array empty each time to prevent stacking more pokemons than expected
+        this.pokemons = [];
         data.forEach((pokemon: { name: string; url: string }) => {
           // initial Pokemon object that will be filled with API's data
           const fetchedPokemon: Pokemon = {
