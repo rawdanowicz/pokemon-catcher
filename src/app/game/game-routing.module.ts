@@ -5,7 +5,7 @@ import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 import { StartScreenComponent } from './start-screen/start-screen.component';
 
 const routes: Routes = [
-  { path: 'start', component: StartScreenComponent },
+  { path: '', component: StartScreenComponent },
   { path: 'pokemons', component: PokemonListComponent },
 ];
 
