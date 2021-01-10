@@ -1,10 +1,10 @@
 export interface Pokemon {
-  name: String;
-  artwork: String;
+  name: string;
+  artwork: string;
   stats: [
     {
-      name: String;
-      value: Number;
+      name: string;
+      value: number;
     }
   ];
   caught?: boolean;

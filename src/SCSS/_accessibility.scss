@@ -1,0 +1,30 @@
+// styles only for accessibility purposes
+
+button,
+input,
+a,
+.tab-focusable:focus-visible {
+  outline-offset: 1px;
+  outline-color: rgba($yellow, 0.7);
+}
+
+.tab-focusable {
+  outline-color: transparent;
+}
+
+// additional query for Firefox which doesn't support :focus-visible
+@-moz-document url-prefix() {
+  .tab-focusable {
+    outline-color: inherit;
+  }
+}
+
+// this class forces screen reader to pause after reading a line
+// to use it simply add this class to the element, for example
+// <span class="sr-pause"></span>
+.sr-pause {
+  &::after {
+    content: ",";
+    color: transparent !important;
+  }
+}

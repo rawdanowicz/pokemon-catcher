@@ -1,4 +1,5 @@
 // all reusable elements and global styles
+
 * {
   letter-spacing: 2px;
 }
@@ -7,34 +8,30 @@ body {
   background-color: rgba($light, 0.5);
 }
 
-button,
-input,
-a {
-  outline-offset: 1px;
-  outline-color: $dark;
-}
-
-// general purpose button
-.btn-primary {
+// general button class with it's modifiers
+.btn {
   width: 150px;
   padding: 10px 15px;
   border: 0;
   border-radius: 4px;
   font-size: 20px;
-  background-color: darken($blue, 5%);
-  color: #fff;
-  transition: transform 0.2s, background-color 0.2s;
+  transition: transform 0.1s, background-color 0.1s;
   cursor: pointer;
 
-  &:hover,
-  &:focus {
-    background-color: darken($blue, 20%);
-    transform: scale(1.05);
+  &--primary {
+    background-color: darken($blue, 5%);
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      background-color: darken($blue, 15%);
+      transform: scale(1.05);
+    }
   }
 }
 
 // input-box is a whole ready tu use input element with it's label
-// to create new input inside of a form just follow
+// to create new input inside of a form just follow this example
 // <div class="input-box">
 //  <label class="input-box__label">
 //  <input class="input-box__input">
@@ -54,7 +51,7 @@ a {
     color: $dark;
     z-index: -1;
 
-    // .input-box__label--active class needs to be added if input's value is not empty
+    // .input-box__label--active class needs to be added to the label if input's value is not empty
     &--active {
       transform: translate(-15%, calc(-150% - 5px)) scale(0.7);
     }

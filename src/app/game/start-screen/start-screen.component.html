@@ -10,7 +10,7 @@
         class="error-message"
         *ngIf="
           (nickname.invalid && (nickname.dirty || nickname.touched)) ||
-          invalidSubmit
+          (nickname.invalid && invalidSubmit)
         "
       >
         Enter your nickname
@@ -37,7 +37,7 @@
           formControlName="nickname"
         />
       </div>
-      <button class="btn-primary" type="submit">Continue</button>
+      <button class="btn btn--primary" type="submit">Continue</button>
     </form>
   </div>
 </div>

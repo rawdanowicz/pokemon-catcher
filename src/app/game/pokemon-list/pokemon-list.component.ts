@@ -42,11 +42,14 @@ export class PokemonListComponent implements OnInit, OnDestroy {
 
   catchEm(): void {
     this.pokemons.forEach((pokemon: Pokemon) => {
-      // each Pokemon gets 50% of getting caught
+      // each Pokemon gets 50% chance of getting caught
       pokemon.caught = Math.random() < 0.5;
     });
 
-    console.log({ nickname: this.player.nickname, pokemons: this.pokemons });
+    const caughtPokemons = this.pokemons.filter(
+      (pokemon: Pokemon) => pokemon.caught
+    );
+    console.log({ nickname: this.player.nickname, pokemons: caughtPokemons });
   }
 
   ngOnDestroy(): void {

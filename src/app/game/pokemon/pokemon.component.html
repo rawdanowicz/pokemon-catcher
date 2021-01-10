@@ -1,11 +1,17 @@
-<div class="pokemon">
-  <h3 class="pokemon__name">{{ pokemon.name }}</h3>
+<!-- Pokemon card is focusable for screen reader purposes -->
+<article class="pokemon tab-focusable" tabindex="0">
+  <header class="pokemon__name">
+    <h3>{{ pokemon.name }}</h3>
+  </header>
+
   <img class="pokemon__artwork" [src]="pokemon.artwork" [alt]="pokemon.name" />
+
   <ul class="pokemon__stats">
     <li class="pokemon__stat" *ngFor="let stat of pokemon.stats">
       {{ stat.name }}:
-      <span class="pokemon__stat--value">{{ stat.value }}</span>
+      <span class="pokemon__stat--value sr-pause">{{ stat.value }}</span>
     </li>
   </ul>
+
   <p class="pokemon__catch" *ngIf="pokemon.caught === true">Caught!</p>
-</div>
+</article>
