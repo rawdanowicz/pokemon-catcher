@@ -17,6 +17,7 @@ export class PokemonListComponent implements OnInit, OnDestroy {
   pokemons!: Pokemon[];
 
   getPokemons?: Subscription;
+  loading = true;
 
   constructor(
     private router: Router,
@@ -35,6 +36,7 @@ export class PokemonListComponent implements OnInit, OnDestroy {
       this.getPokemons = this.pokemonService
         .getPokemons()
         .subscribe((data: Pokemon[]) => {
+          this.loading = false;
           this.pokemons = data;
         });
     }
