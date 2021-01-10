@@ -2,7 +2,7 @@
 
 .pokemon {
   height: 100%;
-  padding: 30px 0;
+  padding: 30px 0 calc(30px + 52px) 0;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -32,5 +32,15 @@
   &__catch {
     position: absolute;
     bottom: 15px;
+    animation: 0.2s caught both;
+
+    @keyframes caught {
+      0% {
+        transform: scale(0.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
   }
 }

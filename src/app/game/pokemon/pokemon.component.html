@@ -20,6 +20,11 @@
       </li>
     </ul>
 
-    <p class="pokemon__catch" *ngIf="pokemon.caught === true">Caught!</p>
+    <img
+      class="pokemon__catch"
+      src="../../../assets/pokeball.png"
+      alt="Caught"
+      *ngIf="pokemon.caught === true"
+    />
   </ng-template>
 </article>

@@ -8,11 +8,15 @@
   </header>
 
   <button
-    class="pokemon-list__btn btn btn--primary"
+    class="pokemon-list__btn btn btn--shake"
     type="button"
     (click)="catchEm()"
   >
-    Catch'em!
+    <img
+      class="pokemon-list__btn--img"
+      src="../../../assets/catchem.png"
+      alt="Catch'em!"
+    />
   </button>
 
   <ul class="pokemon-list__list">

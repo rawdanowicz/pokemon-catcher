@@ -10,14 +10,22 @@ body {
 
 // general button class with it's modifiers
 .btn {
-  width: 150px;
+  min-width: 150px;
   padding: 10px 15px;
   border: 0;
   border-radius: 4px;
   font-size: 20px;
+  background-color: #fff;
   transition: transform 0.1s, background-color 0.1s;
   cursor: pointer;
 
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+    animation: 0;
+  }
+
+  // primary button modifier
   &--primary {
     background-color: darken($blue, 5%);
     color: #fff;
@@ -25,7 +33,32 @@ body {
     &:hover,
     &:focus {
       background-color: darken($blue, 15%);
-      transform: scale(1.05);
+    }
+  }
+
+  // animated shaking button modifier
+  &--shake {
+    animation: shake 3s cubic-bezier(0.36, 0.07, 0.19, 0.97) both infinite;
+    transform: translateX(0);
+
+    @keyframes shake {
+      40%,
+      60% {
+        transform: translateX(0);
+      }
+      42%,
+      57% {
+        transform: translateX(2px);
+      }
+      45%,
+      50%,
+      55% {
+        transform: translateX(-4px);
+      }
+      47%,
+      52% {
+        transform: translateX(4px);
+      }
     }
   }
 }
