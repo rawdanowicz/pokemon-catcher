@@ -13,21 +13,17 @@
 
   &__header {
     text-align: center;
-    font-size: 1.8em;
+    font-size: 30px;
 
     &--trainer {
       white-space: nowrap;
-
-      img {
-        height: 36px;
-      }
     }
   }
 
   &__btn {
     display: block;
     margin: 25px auto;
-    border: 2px solid $dark;
+    padding: 0;
 
     &--img {
       width: 140px;

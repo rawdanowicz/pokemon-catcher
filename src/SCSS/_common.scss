@@ -15,7 +15,7 @@ body {
   border: 0;
   border-radius: 4px;
   font-size: 20px;
-  background-color: #fff;
+  background-color: transparent;
   transition: transform 0.2s, background-color 0.2s;
   cursor: pointer;
 
@@ -84,7 +84,7 @@ body {
     color: $dark;
     z-index: -1;
 
-    // .input-box__label--active class needs to be added to the label if input's value is not empty
+    // .input-box__label--active class needs to be added to the label when input's value is not empty
     &--active {
       transform: translate(-15%, calc(-150% - 5px)) scale(0.7);
     }
