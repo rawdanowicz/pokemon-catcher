@@ -4,7 +4,15 @@
 
 <main class="pokemon-list">
   <header class="pokemon-list__header">
-    <h2>Hello, {{ player.nickname }}!</h2>
+    <h2>
+      Hello,
+      <span class="pokemon-list__header--trainer">
+        <img
+          src="../../../assets/pokemon-trainer.png"
+          alt="Pokemon trainer"
+        />{{ player.nickname }}!
+      </span>
+    </h2>
   </header>
 
   <button

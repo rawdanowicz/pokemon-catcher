@@ -6,6 +6,6 @@ import { Player } from './player';
 export class PlayerService {
   // contains player's data, at the moment only a nickname but easily expandable in the future
   player: Player = {
-    nickname: '',
+    nickname: 'Curricovy',
   };
 }

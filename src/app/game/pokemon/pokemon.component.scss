@@ -6,7 +6,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: rgba($blue, 0.25);
   border-radius: 10px;
@@ -21,7 +21,7 @@
 
   &__stat {
     text-transform: uppercase;
-    line-height: 1.5;
+    line-height: 1.6;
     font-size: 15px;
 
     &--value {
@@ -31,6 +31,7 @@
 
   &__catch {
     position: absolute;
+    height: 52px;
     bottom: 15px;
     animation: 0.2s caught both;
 
