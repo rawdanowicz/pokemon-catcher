@@ -1,5 +1,6 @@
 .start-screen {
   height: 90vh;
+  min-height: 450px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -13,6 +14,7 @@
 .player-window {
   position: relative;
   height: 50vh;
+  min-height: 350px;
   width: 50vh;
   max-height: 520px;
   max-width: 520px;

@@ -18,6 +18,7 @@
   <button
     class="pokemon-list__btn btn btn--shake"
     type="button"
+    *ngIf="!loading"
     (click)="catchEm()"
   >
     <img

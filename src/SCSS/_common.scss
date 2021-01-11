@@ -6,7 +6,6 @@
 
 body {
   background-color: rgba($light, 0.5);
-  overflow-x: hidden;
 }
 
 // general button class with it's modifiers
@@ -17,7 +16,6 @@ body {
   border-radius: 4px;
   font-size: 20px;
   background-color: transparent;
-  transition: transform 0.2s, background-color 0.2s;
   cursor: pointer;
 
   &:hover,
@@ -92,7 +90,7 @@ body {
   }
 
   &__input {
-    width: 100%;
+    width: 260px;
     padding: 5px 2px;
     font-size: 20px;
     background-color: transparent;
@@ -104,10 +102,13 @@ body {
 
 // error message used in forms
 .error-message {
+  width: 100%;
   padding: 10px 20px;
   border: 1px solid $red;
   background-color: rgba($red, 0.05);
   border-radius: 4px;
+  text-align: center;
   font-size: 15px;
+  white-space: nowrap;
   color: $red;
 }
