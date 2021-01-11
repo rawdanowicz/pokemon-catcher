@@ -30,7 +30,9 @@
       aria-hidden="true"
     />
   </button>
-  <span class="tooltip" *ngIf="catchTooltip">Click to catch'em all!</span>
+  <span class="tooltip" *ngIf="catchTooltip && !loading"
+    >Click to catch'em all!</span
+  >
 
   <ul class="pokemon-list__list">
     <li class="pokemon-list__pokemon" *ngFor="let pokemon of pokemons">
