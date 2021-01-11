@@ -10,9 +10,9 @@
 .pokemon-list {
   max-width: 940px;
   margin: 25px auto 125px auto;
+  text-align: center;
 
   &__header {
-    text-align: center;
     font-size: 28px;
 
     &--trainer {
@@ -22,8 +22,8 @@
 
   &__btn {
     display: block;
-    margin: 25px auto;
     padding: 0;
+    margin: 25px auto 0 auto;
 
     &--img {
       width: 140px;
@@ -31,7 +31,7 @@
   }
 
   &__list {
-    margin: 0 auto;
+    margin: 25px auto 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fill, 300px);
     grid-auto-rows: 525px;

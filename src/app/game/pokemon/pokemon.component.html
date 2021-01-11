@@ -20,11 +20,13 @@
       </li>
     </ul>
 
-    <img
-      class="pokemon__catch"
-      src="../../../assets/pokeball.png"
-      alt="Caught"
-      *ngIf="pokemon.caught === true"
-    />
+    <div *ngIf="pokemon.caught === true">
+      <img
+        class="pokemon__catch"
+        src="../../../assets/pokeball.png"
+        alt="Caught!"
+      />
+      <span class="pokemon__catch--tooltip tooltip">Caught!</span>
+    </div>
   </ng-template>
 </article>

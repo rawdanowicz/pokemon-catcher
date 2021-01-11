@@ -21,8 +21,10 @@
 
   &__stat {
     text-transform: uppercase;
+    text-align: left;
     line-height: 1.6;
     font-size: 15px;
+    cursor: default;
 
     &--value {
       font-weight: 700;
@@ -33,7 +35,28 @@
     position: absolute;
     height: 52px;
     bottom: 15px;
-    animation: 0.2s caught both;
+    left: calc(50% - 26px);
+    animation: 0.2s caught;
+    transition: transform 0.2s;
+    transform: scale(1);
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+
+      & + .pokemon__catch--tooltip {
+        visibility: visible;
+        animation: 0.2s;
+      }
+    }
+
+    &--tooltip {
+      visibility: hidden;
+      position: absolute;
+      bottom: -26px;
+      transform: translateX(-50%);
+      animation: 0;
+    }
 
     @keyframes caught {
       0% {

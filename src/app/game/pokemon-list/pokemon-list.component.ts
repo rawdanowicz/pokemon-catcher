@@ -18,6 +18,7 @@ export class PokemonListComponent implements OnInit, OnDestroy {
 
   getPokemons?: Subscription;
   loading = true;
+  catchTooltip = true;
 
   constructor(
     private router: Router,
@@ -43,6 +44,9 @@ export class PokemonListComponent implements OnInit, OnDestroy {
   }
 
   catchEm(): void {
+    // hides newbie tooltip
+    this.catchTooltip = false;
+
     this.pokemons.forEach((pokemon: Pokemon) => {
       // each Pokemon gets 50% chance of getting caught
       pokemon.caught = Math.random() < 0.5;

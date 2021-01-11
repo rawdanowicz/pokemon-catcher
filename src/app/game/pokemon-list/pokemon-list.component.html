@@ -10,6 +10,7 @@
         <img
           src="../../../assets/pokemon-trainer.png"
           alt="Pokemon trainer"
+          aria-hidden="true"
         />{{ player.nickname }}!
       </span>
     </h2>
@@ -20,13 +21,16 @@
     type="button"
     *ngIf="!loading"
     (click)="catchEm()"
+    aria-label="Catch'em!"
   >
     <img
       class="pokemon-list__btn--img"
       src="../../../assets/catchem.png"
       alt="Catch'em!"
+      aria-hidden="true"
     />
   </button>
+  <span class="tooltip" *ngIf="catchTooltip">Click to catch'em all!</span>
 
   <ul class="pokemon-list__list">
     <li class="pokemon-list__pokemon" *ngFor="let pokemon of pokemons">
