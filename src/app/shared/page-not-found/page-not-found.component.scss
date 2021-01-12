@@ -1,0 +1,21 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+
+  &__img {
+    margin: 10px;
+    width: 50vh;
+    max-width: 300px;
+  }
+
+  &__text {
+    margin: 10px;
+    max-width: 400px;
+    text-align: center;
+    font-size: 20px;
+  }
+}
