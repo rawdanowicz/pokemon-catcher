@@ -1,4 +1,4 @@
-# <img src="https://github.com/rawdanowiczdev/pokemon-catcher/blob/main/src/assets/pokeball-footer.png?raw=true">  PokemonCatcher
+# <img src="https://github.com/rawdanowiczdev/pokemon-catcher/blob/main/src/assets/pokeball-footer.png?raw=true">  Pokemon Catcher
 
 My recruitment task for TechMinds sp. z o.o., built with **Angular CLI** (version 11.0.4).
 App is accessible for screen-reader-only users. I have tested it with keyboard and NVDA and it gives a full experience also for people limited to these tools. It's responsive on all types of devices both portrait and landscape view. To avoid unnecessary redirects there's a custom **404** error page with home button. For even better user experience you can *install* it on your device thanks to **PWA** capabilities. 
