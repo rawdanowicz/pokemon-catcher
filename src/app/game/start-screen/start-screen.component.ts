@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {
+  AbstractControl,
   FormBuilder,
   FormControl,
   FormGroup,
@@ -39,17 +40,18 @@ export class StartScreenComponent implements OnInit {
     return null;
   }
 
-  get nickname() {
-    return this.playerForm.get('nickname')!;
+  get nickname(): AbstractControl {
+    return this.playerForm.get('nickname') as AbstractControl;
   }
 
-  // passes data entered by player and keeps them in PlayerService
+  // takes data entered by player and keeps it in PlayerService
   createPlayer(): void {
     if (this.playerForm.valid) {
       this.playerService.player = this.playerForm.value;
       this.playerForm.reset();
       this.router.navigate(['pokemons']);
-    } {
+    }
+    {
       this.invalidSubmit = true;
     }
   }

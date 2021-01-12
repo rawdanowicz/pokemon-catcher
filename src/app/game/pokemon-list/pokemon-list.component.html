@@ -1,20 +1,18 @@
-<div class="loader-container">
+<div class="loader--center">
   <div class="loader" *ngIf="loading"></div>
 </div>
 
 <main class="pokemon-list">
-  <header class="pokemon-list__header">
-    <h2>
-      Hello,
-      <span class="pokemon-list__header--trainer">
-        <img
-          src="../../../assets/pokemon-trainer.png"
-          alt="Pokemon trainer"
-          aria-hidden="true"
-        />{{ player.nickname }}!
-      </span>
-    </h2>
-  </header>
+  <h2 class="pokemon-list__header">
+    Hello,
+    <span class="pokemon-list__header--trainer">
+      <img
+        src="../../../assets/pokemon-trainer.png"
+        alt="Pokemon trainer"
+        aria-hidden="true"
+      />{{ player.nickname }}!
+    </span>
+  </h2>
 
   <button
     class="pokemon-list__btn btn btn--shake"

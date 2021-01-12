@@ -1,9 +1,11 @@
 <div class="start-screen">
   <header>
+    <h1 class="sr-only">Pokemon Catcher</h1>
     <img
-      class="logo"
+      class="start-screen__logo"
       src="../../../assets/pokemon-catcher.png"
       alt="Pokemon Catcher"
+      aria-hidden="true"
     />
   </header>
 
@@ -29,7 +31,7 @@
         <label
           class="input-box__label"
           for="nickname"
-          [ngClass]="nickname.value === '' ? '' : 'input-box__label--active'"
+          [class.input-box__label--active]="nickname.value"
           >Nickname</label
         >
         <input

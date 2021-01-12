@@ -83,7 +83,7 @@ body {
     color: $dark;
     z-index: -1;
 
-    // .input-box__label--active class needs to be added to the label when input's value is not empty
+    // .input-box__label--active class needs to be added to the label while input's value is not empty
     &--active {
       transform: translate(-15%, calc(-150% - 5px)) scale(0.7);
     }

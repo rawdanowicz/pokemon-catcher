@@ -20,10 +20,10 @@ export class PokemonService {
     // gets Pokemons from pokeAPI
     return this.http.get(`${environment.pokeAPI}${queryOffset}`).pipe(
       map((data: any) => data.results),
-      switchMap((data: [{ name: string; url: string }]) => {
+      switchMap((results: [{ name: string; url: string }]) => {
         // makes the Pokemon array empty each time to prevent stacking more pokemons than expected
         this.pokemons = [];
-        data.forEach((pokemon: { name: string; url: string }) => {
+        results.forEach((pokemon: { name: string; url: string }) => {
           // initial Pokemon object that will be filled with API's data
           const fetchedPokemon: Pokemon = {
             name: pokemon.name.replace(/-/g, ' '),
@@ -39,10 +39,10 @@ export class PokemonService {
           this.http.get(pokemon.url).subscribe((data: any) => {
             fetchedPokemon.artwork =
               data.sprites.other['official-artwork'].front_default;
-            fetchedPokemon.stats = data.stats.map((data: any) => {
+            fetchedPokemon.stats = data.stats.map((stat: any) => {
               return {
-                name: data.stat.name.replace(/-/g, ' '),
-                value: data.base_stat,
+                name: stat.stat.name.replace(/-/g, ' '),
+                value: stat.base_stat,
               };
             });
           });

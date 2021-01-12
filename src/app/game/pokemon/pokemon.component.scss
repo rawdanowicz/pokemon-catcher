@@ -45,13 +45,12 @@
       transform: scale(1.1);
 
       & + .pokemon__catch--tooltip {
-        visibility: visible;
-        animation: 0.2s;
+        display: inline-block;
       }
     }
 
     &--tooltip {
-      visibility: hidden;
+      display: none;
       position: absolute;
       bottom: -26px;
       transform: translateX(-50%);

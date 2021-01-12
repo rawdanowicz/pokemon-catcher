@@ -1,6 +1,6 @@
 @import "../../../SCSS/variables";
 
-footer {
+.footer {
   position: relative;
   height: 250px;
   padding: 40px 10px;
@@ -13,7 +13,7 @@ footer {
   background-size: cover;
   color: #000;
 
-  .cover {
+  &--cover {
     position: absolute;
     top: 0;
     left: 0;
@@ -22,21 +22,21 @@ footer {
     background-color: rgba($light, 0.85);
   }
 
-  .element {
+  &__element {
     font-size: 16px;
     z-index: 1;
+  }
 
-    &__link {
-      color: $blue;
-    }
+  &__link {
+    color: $blue;
+  }
 
-    &__quote {
-      font-style: italic;
-    }
+  &__quote {
+    font-style: italic;
+  }
 
-    &__pokeball {
-      height: 20px;
-      margin: 0 2px;
-    }
+  &__pokeball-icon {
+    height: 20px;
+    margin: 0 2px;
   }
 }

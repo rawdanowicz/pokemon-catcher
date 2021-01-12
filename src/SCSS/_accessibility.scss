@@ -19,9 +19,19 @@ a,
   }
 }
 
-// this class forces screen reader to pause after reading a line
-// to use it simply add this class to the element, for example
-// <span class="sr-pause"></span>
+// use to hide element from view but still make it accessible for screen-reader-only users
+// add the class to element for example <h1 class="sr-only"></h1>
+.sr-only {
+  height: 1px !important;
+  width: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  color: transparent !important;
+  background-color: transparent !important;
+}
+
+// add the class to element to force screen reader to pause after reading a line
+// for example <span class="sr-pause"></span>
 .sr-pause {
   &::after {
     content: ",";
