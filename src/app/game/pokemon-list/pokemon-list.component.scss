@@ -1,16 +1,25 @@
 @import "../../../SCSS/variables";
 
 .pokemon-list {
-  max-width: 940px;
-  margin: 25px auto 125px auto;
+  max-width: 1580px;
+  margin: 25px auto 50px auto;
   text-align: center;
 
   &__header {
     font-size: 42px;
 
-    &--trainer {
+    &--player {
       white-space: nowrap;
     }
+  }
+
+  &__list {
+    margin: 25px auto 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-auto-rows: 525px;
+    gap: 20px;
+    justify-content: center;
   }
 
   &__btn {
@@ -21,14 +30,5 @@
     &--img {
       width: 140px;
     }
-  }
-
-  &__list {
-    margin: 25px auto 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 300px);
-    grid-auto-rows: 525px;
-    gap: 20px;
-    justify-content: center;
   }
 }
