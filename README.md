@@ -28,4 +28,4 @@ After it's done move to `/dist/pokemon-catcher`, this is folder containing built
 ## Images
 
 Pokeball graphics and player icon were made by [Nikita Golubev](https://www.flaticon.com/authors/nikita-golubev). Images that also contain text (like a logo) were edited by me using **Gimp** and **Pokémon Solid** font.
-All of images were tinified using [TinyPNG](https://tinypng.com/).
+All of the images were tinified using [TinyPNG](https://tinypng.com/).
