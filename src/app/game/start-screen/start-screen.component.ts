@@ -50,8 +50,7 @@ export class StartScreenComponent implements OnInit {
       this.playerService.player = this.playerForm.value;
       this.playerForm.reset();
       this.router.navigate(['pokemons']);
-    }
-    {
+    } else {
       this.invalidSubmit = true;
     }
   }

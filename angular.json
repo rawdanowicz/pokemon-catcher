@@ -26,8 +26,13 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
-            "assets": ["src/assets", "src/manifest.webmanifest"],
-            "styles": ["src/SCSS/styles.scss"],
+            "assets": [
+              "src/assets",
+              "src/manifest.webmanifest"
+            ],
+            "styles": [
+              "src/SCSS/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -86,8 +91,13 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": ["src/assets", "src/manifest.webmanifest"],
-            "styles": ["src/SCSS/styles.scss"],
+            "assets": [
+              "src/assets",
+              "src/manifest.webmanifest"
+            ],
+            "styles": [
+              "src/SCSS/styles.scss"
+            ],
             "scripts": []
           }
         },
@@ -99,7 +109,9 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "e2e": {
@@ -117,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "pokemon-catcher"
+  "defaultProject": "pokemon-catcher",
+  "cli": {
+    "analytics": "85802a0a-07e6-436e-a213-e18024558c15"
+  }
 }
