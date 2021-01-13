@@ -36,9 +36,9 @@ export class PokemonListComponent implements OnInit, OnDestroy {
       // gets data from PokemonService
       this.getPokemons = this.pokemonService
         .getPokemons()
-        .subscribe((data: Pokemon[]) => {
+        .subscribe((pokemons: Pokemon[]) => {
           this.loading = false;
-          this.pokemons = data;
+          this.pokemons = pokemons;
         });
     }
   }
@@ -47,15 +47,8 @@ export class PokemonListComponent implements OnInit, OnDestroy {
     // hides newbie tooltip
     this.catchTooltip = false;
 
-    this.pokemons.forEach((pokemon: Pokemon) => {
-      // each Pokemon gets 50% chance of getting caught
-      pokemon.caught = Math.random() < 0.5;
-    });
-
-    const caughtPokemons = this.pokemons.filter(
-      (pokemon: Pokemon) => pokemon.caught
-    );
-    console.log({ nickname: this.player.nickname, pokemons: caughtPokemons });
+    const caughtPokemons = this.pokemonService.catchPokemons();
+    console.log(caughtPokemons);
   }
 
   ngOnDestroy(): void {

@@ -57,4 +57,13 @@ export class PokemonService {
       })
     );
   }
+
+  catchPokemons(): Pokemon[] {
+    // each Pokemon gets 50% chance of getting caught
+    this.pokemons.forEach((pokemon: Pokemon) => {
+      pokemon.caught = Math.random() < 0.5;
+    });
+
+    return this.pokemons.filter((pokemon: Pokemon) => pokemon.caught);
+  }
 }
