@@ -17,6 +17,8 @@ In this project I'm using:
 
 To install this project locally clone the repository and use **npm**.
 ```
+$ git clone https://github.com/rawdanowiczdev/pokemon-catcher.git
+$ cd ./pokemon-catcher
 $ npm install
 ```
 
